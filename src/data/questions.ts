@@ -133,6 +133,106 @@ export const questions: Question[] = [
     difficulty: "hard",
   },
   {
+    id: 24,
+    physicist: `爱因斯坦`,
+    portraitPrompt: `Albert Einstein cartoon portrait, playing violin, musical notes floating around, cozy room, humorous illustration`,
+    catchphrase: `想象力比知识更重要！`,
+    famousQuote: `想象力比知识更重要，因为知识是有限的，而想象力概括着世界的一切！`,
+    question: `爱因斯坦除了是物理学大师，还特别擅长演奏哪种乐器？`,
+    options: [
+      { id: 1, text: `小提琴，他从6岁开始学，甚至想过当音乐家`, isHilarious: false },
+      { id: 2, text: `钢琴，他每天弹1小时来放松思考`, isHilarious: true },
+      { id: 3, text: `口琴，他走到哪儿都带着一把`, isHilarious: true },
+    ],
+    correctOptionId: 1,
+    funFact:
+      `🎻 爱因斯坦从6岁开始学小提琴，一生都热爱音乐。他甚至说过，如果没有成为物理学家，可能会成为一名音乐家。他特别喜欢莫扎特和巴赫的作品，经常在思考物理难题时拉小提琴放松。他的第二任妻子爱尔莎说，爱因斯坦在思考相对论时，经常会停下来拉一段小提琴，然后突然喊道："我找到了！"——音乐和物理，在他的大脑里是相通的！`,
+    wrongRoast:
+      `🎻 口琴？你以为爱因斯坦是街头卖艺的啊！人家可是小提琴高手，6岁开始学，莫扎特巴赫信手拈来！据说他思考卡壳时就拉小提琴，拉着拉着灵感就来了——这叫"声波振动激活脑神经"，懂不懂？下次你考试不会的时候，也可以试试拉小提琴——不过小心被监考老师赶出去！`,
+    era: "quantum",
+    difficulty: "easy",
+  },
+  {
+    id: 25,
+    physicist: `爱因斯坦`,
+    portraitPrompt: `Albert Einstein cartoon portrait, sticking out tongue on bicycle, funny expression, playful illustration`,
+    catchphrase: `想象力比知识更重要！`,
+    famousQuote: `想象力比知识更重要，因为知识是有限的，而想象力概括着世界的一切！`,
+    question: `爱因斯坦有一个特别有趣的爱好，他经常在普林斯顿大学校园里做什么？`,
+    options: [
+      { id: 1, text: `骑自行车到处转，还差点因为不看路撞树`, isHilarious: false },
+      { id: 2, text: `喂松鼠，还给它们起名字`, isHilarious: true },
+      { id: 3, text: `在草坪上躺着看云，思考宇宙`, isHilarious: true },
+    ],
+    correctOptionId: 1,
+    funFact:
+      `🚲 爱因斯坦很喜欢骑自行车！在普林斯顿大学工作时，他经常骑着自行车在校园里到处转。据说他骑车时总是在思考问题，经常心不在焉，差点撞到树或者行人。有一张经典照片就是他骑着自行车吐舌头的样子——和那张著名的吐舌头照片一样调皮。他还说过一句名言："生活就像骑自行车，要保持平衡就得不断前进。"——看来这位物理大佬连骑车都能悟出人生哲理！`,
+    wrongRoast:
+      `🚲 喂松鼠？你以为爱因斯坦是公园老大爷啊！人家是骑自行车环游校园的追风少年——虽然经常因为思考物理问题差点撞树！这位大佬连骑车都能骑出哲学感："生活就像骑自行车，要保持平衡就得不断前进。"下次你骑车摔了的时候，可以跟别人说："我在思考相对论呢！"——看看会不会有人信！`,
+    era: "quantum",
+    difficulty: "easy",
+  },
+  {
+    id: 26,
+    physicist: `爱因斯坦`,
+    portraitPrompt: `Albert Einstein cartoon portrait, receiving Nobel Prize, king of Sweden giving medal, formal but humorous`,
+    catchphrase: `想象力比知识更重要！`,
+    famousQuote: `想象力比知识更重要，因为知识是有限的，而想象力概括着世界的一切！`,
+    question: `爱因斯坦获得诺贝尔物理学奖是因为什么成就？`,
+    options: [
+      { id: 1, text: `光电效应的研究（不是相对论！）`, isHilarious: false },
+      { id: 2, text: `相对论的提出，改变了人类对时空的认知`, isHilarious: true },
+      { id: 3, text: `质能方程 E=mc² 的发现`, isHilarious: true },
+    ],
+    correctOptionId: 1,
+    funFact:
+      `🏆 很多人以为爱因斯坦是因为相对论拿的诺奖，其实不是！1921年的诺贝尔物理学奖颁给了他，理由是"对光电效应的研究"——这是量子力学的重要奠基工作之一。为什么不颁给相对论？因为当时相对论争议太大，评委会不敢冒险。结果呢？后来相对论被实验完全证实，成了20世纪最伟大的物理理论，而诺奖委员会也因为这个决定被吐槽了几十年——相当于给贝多芬颁了个"最佳歌词奖"！`,
+    wrongRoast:
+      `🏆 相对论？质能方程？你这是把爱因斯坦的履历表背串了！人家拿诺奖是因为光电效应——这可是量子力学的开山之作！至于相对论？当时诺奖评委觉得太玄乎，不敢颁。结果呢？相对论成了20世纪最牛的物理理论，诺奖评委被吐槽了几十年。这就好比给乔丹颁了个"最佳罚球奖"，你说尴尬不尴尬？`,
+    era: "quantum",
+    difficulty: "hard",
+  },
+  {
+    id: 27,
+    physicist: `爱因斯坦`,
+    portraitPrompt: `Albert Einstein cartoon portrait, with messy hair and super baggy sweater, holding ice cream cone, funny illustration`,
+    catchphrase: `想象力比知识更重要！`,
+    famousQuote: `想象力比知识更重要，因为知识是有限的，而想象力概括着世界的一切！`,
+    question: `爱因斯坦有个著名的怪癖，他常年不穿什么？`,
+    options: [
+      { id: 1, text: `袜子，他觉得穿袜子既不舒服又没必要`, isHilarious: false },
+      { id: 2, text: `手表，他说时间是相对的戴表没用`, isHilarious: true },
+      { id: 3, text: `领带，他讨厌所有正装配件`, isHilarious: true },
+    ],
+    correctOptionId: 1,
+    funFact:
+      `🧦 爱因斯坦确实不爱穿袜子！他觉得穿袜子又麻烦又不舒服，而且经常会磨出洞。他无论出席什么场合都光着脚穿鞋，就连参加正式晚宴和会见总统时也不穿。他的第二任妻子爱尔莎经常劝他穿袜子，但他就是不听。据说他还说过："当我年轻的时候，我发现大脚趾总会把袜子顶出一个洞，所以我就不再穿袜子了。"——这位天才连不穿袜子都能找出逻辑来，也是没谁了！`,
+    wrongRoast:
+      `🧦 不戴手表？人家是研究时间的，但不至于连表都不戴啊！这位大佬的真正怪癖是——不！穿！袜！子！理由还特别充分："大脚趾总会把袜子顶出洞，何必浪费钱呢？"参加颁奖典礼不穿，会见总统不穿，什么场合都光脚穿鞋。这就叫"天才的任性"——换作你不穿袜子去面试，看看HR会不会把你赶出去！`,
+    era: "quantum",
+    difficulty: "easy",
+  },
+  {
+    id: 28,
+    physicist: `爱因斯坦`,
+    portraitPrompt: `Albert Einstein cartoon portrait, writing E=mc2 on blackboard, surrounded by equations, crazy hair, humorous`,
+    catchphrase: `想象力比知识更重要！`,
+    famousQuote: `想象力比知识更重要，因为知识是有限的，而想象力概括着世界的一切！`,
+    question: `爱因斯坦的质能方程 E=mc² 中，c 代表什么？`,
+    options: [
+      { id: 1, text: `光速（约每秒30万公里）`, isHilarious: false },
+      { id: 2, text: `质量（物体的重量）`, isHilarious: true },
+      { id: 3, text: `能量（物体含有的能量）`, isHilarious: true },
+    ],
+    correctOptionId: 1,
+    funFact:
+      `💡 E=mc² 大概是世界上最著名的公式了！E是能量，m是质量，c是光速（约每秒30万公里）。这个公式告诉我们：质量和能量是可以相互转化的，一点点质量就能转化成巨大的能量——因为c的平方实在太大了！1克质量完全转化的能量，相当于2万吨TNT炸药爆炸——这就是原子弹的原理。不过爱因斯坦本人是和平主义者，他研究这个纯粹是为了搞懂宇宙的奥秘，没想到后来被用到了战争上。`,
+    wrongRoast:
+      `💡 质量？能量？你这是把公式里的字母都认全了，但全搞反了啊！c是光速光速光速！重要的事情说三遍！每秒30万公里，一乘平方那能量就爆炸了——1克质量就能抵2万吨TNT！不然你以为原子弹为什么威力那么大？都是这个c²在搞事情！下次看到E=mc²时别瞎猜了，记住：c是光速，是宇宙的速度上限，是连奥特曼都飞不到的速度！`,
+    era: "quantum",
+    difficulty: "hard",
+  },
+  {
     id: 5,
     physicist: `阿基米德`,
     portraitPrompt: `Archimedes cartoon portrait, ancient Greek, running naked on street shouting Eureka, playful illustration`,

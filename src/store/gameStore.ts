@@ -53,7 +53,7 @@ const getSinglePhysicistFromFiltered = (
   if (filteredIndices.length === 0) {
     const fallback = questions.map((_, i) => i);
     const shuffled = fallback.sort(() => Math.random() - 0.5);
-    return { physicist: "科学家", indices: shuffled.slice(0, count) };
+    return { physicist: "科学家", indices: shuffled.slice(0, Math.min(count, shuffled.length)) };
   }
 
   const physicistMap = new Map<string, number[]>();
@@ -80,11 +80,13 @@ const getSinglePhysicistFromFiltered = (
   const shuffled = allIndices.sort(() => Math.random() - 0.5);
   const result = shuffled.slice(0, Math.min(count, shuffled.length));
 
-  while (result.length < count) {
+  let maxAttempts = filteredIndices.length * 2;
+  while (result.length < count && maxAttempts > 0 && result.length < filteredIndices.length) {
     const randomIdx = filteredIndices[Math.floor(Math.random() * filteredIndices.length)];
     if (!result.includes(randomIdx)) {
       result.push(randomIdx);
     }
+    maxAttempts--;
   }
 
   return { physicist: selectedPhysicist, indices: result };
