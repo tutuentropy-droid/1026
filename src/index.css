@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Nunito", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #FFF8F0;
+  overflow-x: hidden;
+}
+
+.game-card {
+  box-shadow:
+    0 4px 6px -1px rgba(26, 60, 52, 0.08),
+    0 10px 30px -5px rgba(255, 107, 53, 0.12),
+    0 0 0 1px rgba(255, 107, 53, 0.04);
+}
+
+.option-btn {
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow:
+    0 2px 4px rgba(26, 60, 52, 0.06),
+    0 0 0 1px rgba(26, 60, 52, 0.04);
+}
+
+.option-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow:
+    0 6px 16px rgba(255, 107, 53, 0.15),
+    0 0 0 2px rgba(255, 107, 53, 0.2);
+}
+
+.option-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.option-correct {
+  background: linear-gradient(135deg, #E8FFF3, #D4F5E0) !important;
+  border-color: #1A3C34 !important;
+  box-shadow: 0 0 0 2px #1A3C34, 0 4px 12px rgba(26, 60, 52, 0.2) !important;
+}
+
+.option-wrong {
+  background: linear-gradient(135deg, #FFF0F0, #FFE0E0) !important;
+  border-color: #FF4757 !important;
+  box-shadow: 0 0 0 2px #FF4757, 0 4px 12px rgba(255, 71, 87, 0.2) !important;
+}
+
+.portrait-ring {
+  background: conic-gradient(
+    from 0deg,
+    #FF6B35,
+    #FFD700,
+    #FF6B35,
+    #FFD700,
+    #FF6B35
+  );
+  padding: 3px;
+  border-radius: 50%;
+  animation: spin-slow 8s linear infinite;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.bg-dots {
+  background-image: radial-gradient(circle, rgba(255, 107, 53, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.result-overlay {
+  backdrop-filter: blur(4px);
+}
