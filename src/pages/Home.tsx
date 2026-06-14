@@ -3,9 +3,11 @@ import PhysicistPortrait from "@/components/PhysicistPortrait";
 import QuestionCard from "@/components/QuestionCard";
 import ResultPopup from "@/components/ResultPopup";
 import ScoreCounter from "@/components/ScoreCounter";
+import { Sparkles } from "lucide-react";
 
 export default function Home() {
-  const { currentQuestion, showResult, currentQuestionIndex } = useGameStore();
+  const { currentQuestion, showResult, currentQuestionIndex, totalQuestions, gameOver, currentPhysicist } =
+    useGameStore();
   const question = currentQuestion();
 
   return (
@@ -19,7 +21,15 @@ export default function Home() {
       <div className="game-card bg-white rounded-3xl p-8 max-w-md w-full relative">
         <div className="absolute top-0 left-0 right-0 h-1.5 rounded-t-3xl bg-gradient-to-r from-warm-orange via-gold to-warm-orange" />
 
-        <div className="flex flex-col items-center gap-6">
+        <div className="flex flex-col items-center gap-4">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-deep-green/10 via-gold/10 to-warm-orange/10 rounded-full px-5 py-2 border border-warm-orange/20">
+            <Sparkles className="w-4 h-4 text-warm-orange animate-pulse" />
+            <span className="font-display text-sm font-bold text-deep-green">
+              本期科学家：{currentPhysicist}
+            </span>
+            <Sparkles className="w-4 h-4 text-warm-orange animate-pulse" />
+          </div>
+
           <PhysicistPortrait
             physicist={question.physicist}
             portraitPrompt={question.portraitPrompt}
@@ -36,7 +46,7 @@ export default function Home() {
 
         <div className="mt-6 text-center">
           <span className="font-body text-xs text-deep-green/30">
-            第 {currentQuestionIndex + 1} / 5 题
+            第 {currentQuestionIndex + 1} / {totalQuestions} 题
           </span>
         </div>
       </div>
@@ -46,11 +56,16 @@ export default function Home() {
         <span className="font-display text-sm text-deep-green/30">
           物理学家趣味问答
         </span>
-        <span className="text-2xl animate-float" style={{ animationDelay: "1s" }}>
-          🌍</span>
+        <span
+          className="text-2xl animate-float"
+          style={{ animationDelay: "1s" }}
+        >
+          🌍
+        </span>
       </div>
 
-      {showResult && <ResultPopup />}
+      {showResult && !gameOver && <ResultPopup />}
+      {gameOver && <ResultPopup />}
     </div>
   );
 }
